@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+/* Orbit Container */
+.orbit-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+/* Center Icon */
+.center-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.center-icon img {
+  width: 100%;
+}
+
+/* Orbit Rings */
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(200, 200, 200, 0.5); /* Light Grey Orbit Lines */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Inner Orbit */
+.inner-orbit {
+  width: 350px;
+  height: 350px;
+}
+
+/* Outer Orbit */
+.outer-orbit {
+  width: 480px;
+  height: 480px;
+}
+
+/* Orbiting Logos */
+.orbiting-logo {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  animation: stay-upright 10s linear infinite;
+}
+
+/* Logo Images */
+.orbiting-logo img {
+  width: 60%;
+  height: auto;
+}
+
+/* Positioning for Inner Orbit */
+.google-calendar { top: 10%; left: 50%; transform: translateX(-50%); }
+.outlook { top: 70%; left: 20%; transform: translateX(-50%); }
+.gmail { top: 70%; left: 80%; transform: translateX(-50%); }
+
+/* Positioning for Outer Orbit */
+.zapier { top: 5%; left: 50%; transform: translateX(-50%); }
+.slack { top: 90%; left: 30%; transform: translateX(-50%); }
+.calendly { top: 90%; left: 70%; transform: translateX(-50%); }
+
+/* Logo Animation - upright */
+@keyframes stay-upright {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
