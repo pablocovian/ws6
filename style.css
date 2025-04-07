@@ -15,7 +15,7 @@ body {
   height: 500px;
 }
 
-/* Center Icon */
+/* Core System Icon */
 .center-icon {
   position: absolute;
   top: 50%;
@@ -34,7 +34,7 @@ body {
 .orbit {
   position: absolute;
   border-radius: 50%;
-  border: 2px solid rgba(200, 200, 200, 0.5); /* Light Grey Orbit Lines */
+  border: 2px solid rgba(200, 200, 200, 0.5);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -63,7 +63,6 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  animation: stay-upright 10s linear infinite;
 }
 
 /* Logo Images */
@@ -73,17 +72,11 @@ body {
 }
 
 /* Positioning for Inner Orbit */
-.google-calendar { top: 10%; left: 50%; transform: translateX(-50%); }
-.outlook { top: 70%; left: 20%; transform: translateX(-50%); }
-.gmail { top: 70%; left: 80%; transform: translateX(-50%); }
+.google-calendar { top: 0%; left: 50%; transform: translate(-50%, 0); }
+.outlook         { top: 70%; left: 20%; transform: translate(-50%, 0); }
+.gmail           { top: 70%; left: 80%; transform: translate(-50%, 0); }
 
 /* Positioning for Outer Orbit */
-.zapier { top: 5%; left: 50%; transform: translateX(-50%); }
-.slack { top: 90%; left: 30%; transform: translateX(-50%); }
-.calendly { top: 90%; left: 70%; transform: translateX(-50%); }
-
-/* Logo Animation - upright */
-@keyframes stay-upright {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
-}
+.zapier   { top: 0%; left: 50%; transform: translate(-50%, 0); }
+.slack    { top: 90%; left: 30%; transform: translate(-50%, 0); }
+.calendly { top: 90%; left: 70%; transform: translate(-50%, 0); }
